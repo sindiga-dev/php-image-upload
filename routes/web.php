@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//get files
+Route::get('file', [FileController::class, 'create']); 
+Route::post('file', [FileController::class, 'store']);
